@@ -1,0 +1,40 @@
+{
+    "announcements": [
+        {
+            "show": false,
+            "title": "Yard Sale",
+            "description": "This is one of our annual fundraisers we do, if you have anything you want to donate so it can be reused by another person, feel free to scan the QR Code. Between 2 PM to 4 PM on Sunday, all items are free, all purchases at the yard sale helps raise funds for our local robotics programs.",
+            "flyerUrl": "Files/Images/Flyers/yard-sale-2026.png"
+        }
+    ],
+    "onboarding": {
+        "heading": "Holt Robotics: 2026-2027 Season",
+        "message": "Teams are forming now!",
+        "logoUrl": "Files/Images/first-canopy-logo.png" 
+    },
+    "programs": [
+        {
+            "name": "FRC: RoboRams (Grades 9-12)",
+            "description": "Our High School Team",
+            "link": "index.html"
+        },
+        {
+            "name": "FTC: Technorams (Grades 6-8)",
+            "description": "Smaller teams of Junior High students.",
+            "link": "index.html"
+        },
+        {
+            "name": "FLL (Grades 1-5)",
+            "description": "Students work with Lego and try to think like an engineer",
+            "link": "index.html"
+        }
+    ],
+    "aboutUs": {
+        "text": "The Holt High School Robotics team was founded in 2015. Since then, the team has grown in achievement, experience, and skills, but most importantly community development.",
+        "firstRoboticsText": "FIRST is an engineering-oriented organization that aims to guide youth into actively taking part in robotics competitions to challenge their minds and excel in STEM education."
+    },
+    "youtubeVideos": [
+        "https://www.youtube.com/embed/Ff59njk4URI",
+        "https://www.youtube.com/embed/B0EHQp1OIz4"
+    ]
+}

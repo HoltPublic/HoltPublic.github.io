@@ -1,0 +1,23 @@
+{
+  "seasons": [
+    {
+      "year": "2026",
+      "gameName": "REBUILT",
+      "gameLogoUrl": "Files/Images/FRC/GameLogo/Rebuilt.png",
+      "gameBreakdown": "In the 2026 FRC Season, Reefscape, two alliances of 3 teams each compete to score a lot of fuel (Dense foam balls, unlike the wiffle balls from 2017) into a giant structure known as the hub. Each team has 1 Minute and 50 Seconds to score fuel, including the 20 seconds of autonomous operation, the 10-second transition shift, and the 50 seconds per alliance shift, during which the opposing alliance won't earn points, followed by the last 30 seconds. There is also a tower to climb, where, if you climb it autonomously, you can earn a total of 30 points via 2 robots at level 1, making it a lot easier to earn that ranking point. Whichever alliance and the end of the game wins the match.",
+      "robotName": "Saturn",
+      "robotPhotoUrl": "Files/Images/FRC/RobotInfoPhoto/2026.jpg",
+      "teamPhotoUrl": "Files/Images/FRC/TeamPhoto/2026.jpg",
+      "competitions": [
+        "FIM District Milford Event - #27",
+        "FIM District Mason Event - #14, Quarterfinalist"
+      ],
+      "awards": [
+        "Innovation in Control - nVent"
+      ],
+      "robotInfo": "Drivetrain: Similar to the last 3 years, we used a Swerve Drivetrain, using MK5n modules from Swerve Drive Specialties. Although at first Saturn used a standard indexer, we switched it out for a spindexer at Mason due to slight issues with using a spindexer, we used a turret both times to allow us to be able to angle shots to be more precise.",
+      "matchVideoEmbed": "https://youtube.com/embed/ogxOuyDr8PY",
+      "seasonReflection": "We believe that even though we didn't make it to States again, we did quite well this season. We managed to be more student-lead than the prior season, and we won an award, unlike last season. "
+    }
+  ]
+}

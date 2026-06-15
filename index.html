@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Files/Images/faviconV2.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Holt Robotics</title>
+</head>
+<body>
+    <header id="global-navbar" class="navbar"></header>
+    <!-- Dynamic Flyer Announcements Grid -->
+<section id="announcements-section" class="announcements-container hidden">
+    <h2 class="section-title">Team Announcements & Events</h2>
+    <div id="announcements-grid" class="announcements-grid">
+        <!-- Injected by JavaScript -->
+    </div>
+</section>
+
+
+    <main class="container">
+        
+        
+        <section id="join-section" class="card notice-centered-block">
+            <div class="notice-logo-wrapper">
+                <img id="onboarding-logo" src="" alt="FIRST Canopy Logo">
+            </div>
+            <div class="notice-text-wrapper">
+                <h2 id="join-heading"></h2>
+                <p id="join-message" class="highlight-tag-large"></p>
+            </div>
+        </section>
+
+
+        <section id="calendar-section" class="card">
+            <h2>Upcoming Events</h2>
+            <div class="calendar-wrapper">
+                <iframe src="https://calendar.google.com/calendar/u/0/newembed?color=%2342d692&src=holtrobotics@gmail.com" style="border: 0" width="100%" height="450" frameborder="0" scrolling="no"></iframe>
+
+            </div>
+        </section>
+        <section class="card">
+            <h2>About Us</h2>
+            <p id="about-text"></p>
+            <h3>About FIRST Robotics</h3>
+            <p id="first-text"></p>
+        </section>
+
+        <section class="card">
+            <h2>Match Highlights</h2>
+            <div id="video-grid" class="video-grid"></div>
+        </section>
+    </main>
+    <script src="JS/navbar.js"></script>
+    <script src="JS/home.js"></script>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRC 6078 | Holt RoboRams</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+      -- Dynamic Announcement Banner -- 
+    <div id="announcement-banner" class="banner hidden">
+        <h2 id="banner-title"></h2>
+        <p><strong id="banner-date"></strong> - <span id="banner-desc"></span></p>
+        <a id="banner-link" class="btn-gold" href=""></a>
+    </div>
+
+    <main class="container">
+          -- Recruitment Section --
+        <section class="card signup-section">
+            <div class="signup-text">
+                <h2>Join FRC Team 6078!</h2>
+                <p>Scan the QR code or click the button below to sign up for the upcoming season.</p>
+                <a id="signup-btn" href="#" target="_blank" class="btn-gold">Sign Up Form</a>
+            </div>
+            <div class="signup-qr">
+                <img id="signup-qr-img" src="" alt="Team Sign Up QR Code">
+            </div>
+        </section>
+
+        -- Google Calendar Integration --
+        <section id="calendar-section" class="card">
+            <h2>Upcoming Events</h2>
+            <div class="calendar-wrapper">
+                -- Replace with your actual team Google Calendar embed link --
+                <iframe src="https://google.com" style="border: 0" width="100%" height="450" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </section>
+
+        -- About Us Section --
+        <section class="card">
+            <h2>About the RoboRams</h2>
+            <p id="about-text"></p>
+            <h3>About FIRST Robotics</h3>
+            <p id="first-text"></p>
+        </section>
+
+        -- YouTube Video Grid --
+        <section class="card">
+            <h2>Match Highlights</h2>
+            <div id="video-grid" class="video-grid"></div>
+        </section>
+    </main>
+
+    <script src="home.js"></script>
+</body>
+</html>
+-->
