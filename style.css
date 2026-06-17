@@ -406,6 +406,7 @@ h2, h3 {
     font-size: 1.5rem;
 }
 .topic-text-side p {
+    white-space: pre-wrap;
     line-height: 1.5;
     margin: 0;
 }

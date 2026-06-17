@@ -4,13 +4,13 @@
       "year": "2026",
       "gameName": "REBUILT",
       "gameLogoUrl": "Files/Images/FRC/GameLogo/Rebuilt.png",
-      "gameBreakdown": "In the 2026 FRC Season, Reefscape, two alliances of 3 teams each compete to score a lot of fuel (Dense foam balls, unlike the wiffle balls from 2017) into a giant structure known as the hub. Each team has 1 Minute and 50 Seconds to score fuel, including the 20 seconds of autonomous operation, the 10-second transition shift, and the 50 seconds per alliance shift, during which the opposing alliance won't earn points, followed by the last 30 seconds. There is also a tower to climb, where, if you climb it autonomously, you can earn a total of 30 points via 2 robots at level 1, making it a lot easier to earn that ranking point. Whichever alliance and the end of the game wins the match.",
+      "gameBreakdown": "In the 2026 FRC Season, Rebuilt, two alliances of 3 teams each compete to score a lot of fuel (Dense foam balls, unlike the wiffle balls from 2017) into a giant structure known as the hub. Each team has 1 Minute and 50 Seconds to score fuel, including the 20 seconds of autonomous operation, the 10-second transition shift, and the 50 seconds per alliance shift, during which the opposing alliance won't earn points, followed by the last 30 seconds. There is also a tower to climb, where, if you climb it autonomously, you can earn a total of 30 points via 2 robots at level 1, making it a lot easier to earn that ranking point. Whichever alliance and the end of the game wins the match.",
       "robotName": "Saturn",
       "robotPhotoUrl": "Files/Images/FRC/RobotInfoPhoto/2026.jpg",
       "teamPhotoUrl": "Files/Images/FRC/TeamPhoto/2026.jpg",
       "competitions": [
         "FIM District Milford Event - #27",
-        "FIM District Mason Event - #14, Quarterfinalist"
+        "FIM District Mason Event - #14, Round 3"
       ],
       "awards": [
         "Innovation in Control - nVent"
@@ -18,6 +18,51 @@
       "robotInfo": "Drivetrain: Similar to the last 3 years, we used a Swerve Drivetrain, using MK5n modules from Swerve Drive Specialties. Although at first Saturn used a standard indexer, we switched it out for a spindexer at Mason due to slight issues with using a spindexer, we used a turret both times to allow us to be able to angle shots to be more precise.",
       "matchVideoEmbed": "https://youtube.com/embed/ogxOuyDr8PY",
       "seasonReflection": "We believe that even though we didn't make it to States again, we did quite well this season. We managed to be more student-lead than the prior season, and we won an award, unlike last season. "
+    },
+
+    {
+      "year": "2025",
+      "gameName": "REEFSCAPE",
+      "gameLogoUrl": "Files/Images/FRC/GameLogo/Reefscape.png",
+      "gameBreakdown": "In the 2025 FRC Season, Reefscape, two alliances of 3 teams each compete to score a lot coral (pvc tubes) into a structure called the reef, and removing algae (green kickballs) from the reef into another structure called the processor. In the last 20 seconds of the match, robots climb on these cages to earn ranking points. The alliance with the most amount of points wins the match.",
+      "robotName": "MOAT",
+      "robotPhotoUrl": "Files/Images/FRC/RobotInfoPhoto/2025.jpg",
+      "teamPhotoUrl": "",
+      "competitions": [
+        "FIM District Kettering Event #2 - #10, Round 3 - Alliance 5",
+        "FIM District Mason Event - #20, Round 2 - Alliance 8",
+        "Rainbow Rumble - #20, Round 3 - Alliance 3",
+        "Goonettes Invitational - #23 - Round 2 - Alliance 5"
+      ],
+      "awards": [
+        ""
+      ],
+      "robotInfo": "Drive Train: Like the last 2 years, we incorporated a swerve drive system. It has a top speed of 17.1 feet per second\n\nArm: MOAT uses a 3d printed container to hold Coral, and also knock Algae off the reef\n\nClimbing: The climber allows us to do deep climbs on the barge, and latches to make sure that MOAT doesn't fall.\n\nAutonomous: Although MOAT's auton isn't the greatest, it usually guarantees that any alliance MOAT is on gets at least 3 points\n\nSpecialization: MOAT is field centric, meaning that it determines its movement and such on the field itself.\n\nDescription: Equipped with a wonderous arm and 8 Kraken x60 motors, MOAT is designed for speed and agility, ready to take on *almost everything\n\nWeighs: 110 lbs\n\nSizing: 29 square inch chassis",
+      "matchVideoEmbed": "https://www.youtube.com/embed/LbslgLzi5Xs",
+      "seasonReflection": "Our Team (6078) had a decent season during the 2025 Reefscape Competition, with our robot (MOAT) proving to be a capable contender. "
+    },
+    {
+      "year": "2024",
+      "gameName": "Crescendo",
+      "gameLogoUrl": "Files/Images/FRC/GameLogo/Crescendo.png",
+      "gameBreakdown": "In the 2024 FRC Crescendo season, two competing alliances score notes (orange foam rings essentially) into a speaker or amp, human players provide the notes from sources. In the last moments of the game, robots race to climb the chain of the stage with their alliance.",
+      "robotName": "The Big Cheese",
+      "robotPhotoUrl": "Files/Images/FRC/RobotInfoPhoto/2024.jpg",
+      "teamPhotoUrl": "Files/Images/FRC/TeamPhoto/2024.jpg",
+      "competitions": [
+        "FIM District Battle Creek Event - #23, Round 3 - Alliance 7",
+        "FIM District Mason Event - #14, Round 3 - Alliance 8",
+        "FIRST In Michigan State Championship (DTE Field) - #24",
+        "Rainbow Rumble - #26, Finalist - Alliance 1",
+        "Goonettes Invitational - #30 - Round 5 - Alliance 2"
+      ],
+      "awards": [
+        "District FIRST Impact Award",
+        "District Engineering Inspiration Award"
+      ],
+      "robotInfo": "Drive Train: This year, we incorporated a swerve drive system with speeds up to 17 ft/sec\n\nOutput: We decided to utilize a shooter mechanism, with 4 inch compliant wheels precision spaced for maximum energy transfer to game piece. We also went with rear-loading feeder shaft, which allows transfer from intake and auto-firing when wheels have reached target rpm and arm has reached target angle and alignment.\n\nClimbing: 2-Stage climb with telescoping arms and custom linear slides capable of trap scoring\n\nAuton:  Custom path-planner software combined with gyro feedback and wheel odometry to pre-program field navigation and intake-shoot commands. A variety of routines were created to score various gamepieces in the speaker and amp.\n\nSpecializations: As a special piece, we've incorporated a field-centric driving system. \n\nDescription:\nEquipped with a powerful claw system and eight Kraken Motors, this machine is designed for speed and agility, ready to take on even the most challenging obstacles.\n\nWeighs: 145 lbs \n\nSizing: 29.5 sq Chassis",
+      "matchVideoEmbed": "https://www.youtube.com/embed/lV_amrQujtE",
+      "seasonReflection": "Team 6078 had a successful season during the 2024 Crescendo competition, with their robot proving to be a strong and capable contender. The team's hard work and dedication paid off as they designed and built a robot that could perform the game tasks with ease, impressing both their competitors and spectators. The team's strategic planning and execution were top-notch, and their robot's exceptional performance was a testament to their skills and teamwork"
     }
   ]
 }
