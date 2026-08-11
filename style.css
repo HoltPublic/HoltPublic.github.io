@@ -1,10 +1,10 @@
 :root {
-    --bg-dark: #121212;       /* Matte black background */
-    --card-bg: #1A1A1A;       /* Charcoal gray for content blocks */
-    --ram-brown: #3E2A1C;     /* Deep rich brown for structure/borders */
-    --ram-gold: #FFC72C;      /* Vibrant gold for high-visibility accents */
-    --text-light: #F5F5F5;    /* Crisp off-white text */
-    --text-muted: #B3B3B3;    /* Soft gray for secondary text */
+    --bg-dark: #121212;       /* Background */
+    --card-bg: #1A1A1A;       /* Content Blocks */
+    --ram-brown: #3E2A1C;     /* Structure/Borders */
+    --ram-gold: #FFC72C;      /* Accents */
+    --text-light: #F5F5F5;    /* Primary Text */
+    --text-muted: #B3B3B3;    /* Secondary Text */
 }
 
 body {
@@ -41,6 +41,8 @@ h2, h3 {
     padding: 0 20px;
 }
 .announcements-container.hidden { display: none; }
+
+.notice-centered-block.hidden {display: none;}
 
 .section-title {
     color: var(--ram-gold);
