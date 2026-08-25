@@ -1,24 +1,11 @@
+//Basically when the content is loaded, the Javascript will fetch the associated JSON file
+//And then parse that stream into a JS Object, which then with that we then map the list dynamically into a topic block.
 document.addEventListener("DOMContentLoaded", () => {
     fetch('Files/Data/ftc.json')
         .then(response => response.json())
         .then(data => {
 
-            // 1. Render Core Values and Identity Elements
-            if (data.identity) {
-                document.getElementById('team-mission').textContent = data.identity.mission;
-                const valuesContainer = document.getElementById('team-values-list');
-                if (valuesContainer && data.identity.values) {
-                    valuesContainer.innerHTML = '';
-                    data.identity.values.forEach(item => {
-                        const itemBox = document.createElement('div');
-                        itemBox.className = 'individual-value-item';
-                        itemBox.innerHTML = `<h4>${item.title}</h4><p>${item.desc}</p>`;
-                        valuesContainer.appendChild(itemBox);
-                    });
-                }
-            }
-
-            // 2. Map FTC Seasons (Game Breakdown and Awards Only)
+            //Map FTC Seasons (Game Breakdown and Awards Only)
             const masterContainer = document.getElementById('ftc-seasons-container');
             if (!masterContainer || !data.seasons) return;
             masterContainer.innerHTML = '';

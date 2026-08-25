@@ -1,5 +1,8 @@
-Hi, Riley here, I intended on making the website updating process as painless as possible, by using JSON to hold any changes, so you just need a basic understanding of JSON, of which it's a data format.
+Ok, so basically this website will primarily be edited via HTML and JSON. 
+In the body text of the HTML File, include the following code: <header id="global-navbar" class="navbar"></header>
+towards the top and <script src="JS/navbar.js"></script> at the bottom before closing <body>
+This allows us to have a navigation bar on each webpage. Otherwise, do whatever is meant to update the website.
 
-The announcements section is an array, meaning it can hold many objects, so in this case, the main things you need to look at are show, title, description, and flyer URL, the thing saying show, that's basically if you want the announcement to be visible, it's a boolean value, so you put either true or false there, title and description are self-explanatory, just put what you want in the two quotation marks, the flyer URL is actually pointing to a local place within the project itself, in the case of this, you typically want to grab the URL, typically Files/Images/Flyers, and then the file name, including the extension.
-
-For recruitment, you really only need to replace the URL and QR Code if there is a change needed. About Us, I don't think that's changing, but it's the same as the title and description in that both things need to be within quotes. The YouTube Videos section is an array of YouTube Links (Also please remove the tracking ID by removing everything after ?si=, which includes those characters)
+If the page is something like frc.html or ftc.html, then that means most of the content is dynamically loaded
+from JavaScript pulling from a JSON file, just look for the respective .json files within Files/Data, and images can be found in
+Files/Images
