@@ -204,6 +204,10 @@ h2, h3 {
   letter-spacing: 1.5px;
 }
 
+h1 {
+  color: var(--ram-gold);
+}
+
 .page-hero h1 {
   font-size: 2.5rem;
   margin: 0 0 10px 0;
@@ -480,4 +484,129 @@ social-footer {
   .topic-media-side {
     flex: none;
   }
+}
+
+#knowledge-title {
+  color: var(--ram-gold);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.board-card {
+  border: 3px solid var(--ram-brown);
+  border-radius: 8px;
+  padding: 15px;
+  text-decoration: none;
+  color: var(--text-light);
+  display: block;
+  transition: border-color 0.2s ease;
+}
+
+.board-card:hover {
+  background-color: var(--card-bg);
+  border-color: var(--ram-gold);
+}
+
+.meta-text {
+  font-size: 0.85em;
+  color: var(--ram-gold);
+  margin-top: 10px;
+}
+
+#knowledge-board-container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.knowledge-card {
+  border: 2px solid var(--ram-gold);
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 30px;
+  background-color: var(--ram-brown);
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.imgage-container-box {
+  border: 1.5px dashed var(--ram-brown);
+  background-color: var(--card-bg);
+  padding: 8px;
+  margin: 14px 0;
+  text-align: center;
+}
+
+.image-container-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+pre {
+  background-color: var(--card-bg);
+  padding: 14px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  margin: 14px 0;
+}
+
+.card-signature-footer {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  text-align: right;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.card-signature-footer p {
+  margin: 2px 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.card-signature-footer .author {
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--ram-gold);
+}
+
+.card-signature-footer .post-timestamp {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.navbar-spacer {
+        height: 80px;
+}
+
+.card-link-container{
+  margin: 12px 0;
+}
+.board-link {
+  color: var(--text-light);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.board-link:hover {
+  color: var(--ram-gold);
+  text-decoration: none;
 }

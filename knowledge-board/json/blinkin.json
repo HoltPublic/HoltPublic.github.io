@@ -1,0 +1,22 @@
+{
+ "metadata":{
+    "title": "Rev Blinkin",
+    "lastUpdated": "10/19/2026",
+    "latestAuthor": "Riley A."
+ },
+
+ "blocks": [
+    {
+    "postAuthor": "Riley A.",
+    "postDate": "10/19/2026 4:13 PM (Or 16:13) Eastern Time",
+    "items": [
+        {"type": "text", "value":"I figured that this is fairly simple, as I got some working code for Saturn, that was never once used 😓..."},
+        {"type": "text", "value":"The Rev Blinkin is technically just a really fancy Spark Motor that uses PWM that calls its Constants for the PWM Port. I'm mainly pulling from my example code for the Blinkin, so after importing Spark to control the LED stuff, we then use a pattern, which I don't have a video of particular patterns, but I've got this sheet to help out."},
+        {"type": "image", "value":"images/rev-blinkin-patterns.png"},
+        {"type": "text", "value":"The left most one that isn't 56-88, that's a pulse width, then to the right of that is a Spark Motor Value (Again, in code it's a really fancy Spark Motor), then the pattern type, where typically there's a fixed palette pattern like Rainbow, or Confetti, or there are Color 1/2 Patterns that I think use colors defined in setup mode, then the pattern name, then the normal operation adjustments, with first one being pattern density typically, or pattern width, or dimming, then typically speed, and lastly is just brightness, though in setup mode, adj 1 is for color 1, adj 2 is for color 2, and brightness gets replaced with length, so your LEDs can be a certain length."},
+        {"type": "text", "value": "\n\nOk, this has gotten a little large, I'll share some code examples later. If you want an example of Blinkin Code from Saturn"},
+        {"type": "link", "value": "It's available here.", "href": "https://github.com/HoltPublic/2026-FRC-Robot/blob/main/src/main/java/frc/robot/subsystems/Blinkin.java"}
+    ]
+    }
+ ]
+}
