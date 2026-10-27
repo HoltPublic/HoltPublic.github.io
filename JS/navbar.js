@@ -5,13 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
     navbarHeader.innerHTML = `
         <div class="nav-container">
             <!-- Left Side Logo -->
-            <a href="index.html" class="nav-logo">HOLT ROBOTICS</a>
+            <a href="/index.html" class="nav-logo">HOLT ROBOTICS</a>
 
             <!-- Center Site Content Links -->
             <nav class="nav-links">
-                <!-- <a href="sponsors.html">Sponsors</a> The page doesn't exist yet. So I commented it out -->
-                <a href="frc.html">RoboRams</a>
-                <a href="ftc.html">TechnoRams</a>
+                <!-- <a href="/sponsors.html">Sponsors</a> The page doesn't exist yet. So I commented it out -->
+                <a href="/frc.html">RoboRams</a>
+                <a href="/ftc.html">TechnoRams</a>
+                <a href="/knowledge-board.html">Knowledge Board</a>
             </nav>
 
             <!-- Right Side Social Media Links -->
