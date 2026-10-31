@@ -1,0 +1,80 @@
+{
+ "metadata":{
+    "title": "Rev Blinkin for FIRST Robotics Competition (Commands Version 2)",
+    "lastUpdated": "10/31/2026",
+    "latestAuthor": "Riley A."
+ },
+
+ "blocks": [
+    {
+    "postAuthor": "Riley A.",
+    "postDate": "10/19/2026 4:13 PM (Or 16:13) Eastern Time (Edited 10/31/2026 10:59 AM Eastern Daylight Time)",
+    "postNumber": 1,
+    "items": [
+        {"type": "text", "value":"I figured that this is fairly simple, as I got some working code for Saturn, that was never once used 😓..."},
+        {"type": "text", "value":"The Rev Blinkin is technically just a really fancy Spark Motor that uses PWM that calls its Constants for the PWM Port. I'm mainly pulling from my example code for the Blinkin, so after importing Spark to control the LED stuff, we then use a pattern, which I don't have a video of particular patterns, but I've got this sheet to help out."},
+        {"type": "image", "value":"images/blinkin-frc/rev-blinkin-patterns.png"},
+        {"type": "text", "value":"The left most one that isn't 56-88, that's a pulse width, then to the right of that is a Spark Motor Value (Again, in code it's a really fancy Spark Motor), then the pattern type, where typically there's a fixed palette pattern like Rainbow, or Confetti, or there are Color 1/2 Patterns that I think use colors defined in setup mode, then the pattern name, then the normal operation adjustments, with first one being pattern density typically, or pattern width, or dimming, then typically speed, and lastly is just brightness, though in setup mode, adj 1 is for color 1, adj 2 is for color 2, and brightness gets replaced with length, so your LEDs can be a certain length."},
+        {"type": "text", "value": "\n\nOk, this has gotten a little large, I'll share some code examples later. If you want an example of Blinkin Code from Saturn"},
+        {"type": "link", "value": "It's available here.", "href": "https://github.com/HoltPublic/2026-FRC-Robot/blob/main/src/main/java/frc/robot/subsystems/Blinkin.java"},
+        {"type": "link", "value": "Here's the pattern table as well.", "href": "https://1166281274-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-ME3KPEhFI6-MDoP9nZD%2Fuploads%2FMOYJvZmWgxCVKJhcV5fn%2FREV-11-1105-LED-Patterns.pdf?alt=media&token=e8227890-6dd3-498d-834a-752fa43413fe"}
+    ]
+    },
+    
+    {
+      "postAuthor": "Riley A.",
+      "postDate": "10/26/2026 7:33 PM Eastern Daylight Time",
+      "postNumber": 2,
+      "items":[
+         {"type": "text", "value": "Ok, so first, we want to go to the Constants Class. We want to make a static class called BlinkinConstants. The first thing we'll add to the new class is a static final integer meant to indicate the PWM Port, I'm not sure what the PWM port setup will look like on the SystemCore, but on the RoboRIO, there's 10 ports labeled from 0-9. Then though it might be much. We want to add every possible combo into an enum, which is essentially a fixed list. You really only need to set values from the table to the values listed there, which is a double, you'll then make a double variable and a constructor for an enum, you could also add a String variable to have human readable text, but that's more work, essentially an enum could be described as a mini class."},
+         {"type": "text", "value": "After you set up the Constants class, it should look something akin to this:"},
+         {"type":"image", "value": "images/blinkin-frc/blinkin-constants-example-1.png"},
+         {"type": "text", "value": "Ok, so before I share the second part of the constants, yes the example code was from the 2026 Robot and I had set up stuff to allow people to change the constants for either the Goonettes Invitational, or a standard one, but the Blinkin was never used on the robot."},
+         {"type": "image", "value": "images/blinkin-frc/blinkin-constants-example-2.png"},
+         {"type":"text", "value": "With that, we've now set up our constants to now have all possible values for the REV Blinkin. In the next post, I will share my setup of the Blinkin subsystem and share that with you."}
+      ]
+    },
+    {
+      "postAuthor": "Riley A.",
+      "postDate": "10/31/2026 11:13 AM Eastern Daylight Time",
+      "postNumber": 3,
+      "items": [
+         {"type": "text", "value": "After the Constants class is set up.  We'll first look at our subsystem constructor method. Now, as the REV Blinkin is just a really fancy Spark Motor, we want to import the REVib Vendor Dependency, which contains all the REV related code, including the Spark Motor stuff we use to make the Blinkin do Blinkin things. Your Vendor Libraries in your robot code should look something like this."},
+         {"type": "image", "value": "images/blinkin-frc/vendorlib-example.png"},
+         {"type": "text", "value": "We do have other Vendor Dependencies, sometimes called VendorDeps, but we will ignore those for now, CTRE-Phoenix is just for any CTRE electronics, which is typically what we use for Swerve Drive, Pathplanner is for auton. REVLib is what we will be using, and WPILib-New-Commands is pretty much for making the robot code work. The first things we'll add to the subsystem are the variables the subsystem uses, and the constructor. I'll discuss the periodic method at a later time."},
+         {"type": "text", "value": "Firstly, with that REVLib VendorDep added, we will first make a new Spark Motor variable, it's only going to be used here so it's recommended to make the motor private, I recommend calling it something short enough to be easy to read yet detailed enough for others to know what that's supposed to be. I personally recommend m_ledController (The m_ is for class member distinguishing and clears up confusion)."},
+         {"type": "text", "value": "After making the Spark Motor variable, I used a SendableChooser to allow for custom color selection for the Blinkin Pattern during testing, so that's optional to add. Next up is a double that controls the color as it uses, I don't really have any examples of other Spark Motors used in Saturn, mostly as I think the REV Blinkin is the only Spark motor, as I think at a certain point we exclusively used Kraken motors (CTRE). You'll want to set the color to 0.0, as 0 is the standard default for things, though that does put the pattern between Larson Scanner and Light Chase for Color 1 Pattern."},
+         {"type": "text", "value": "The last member variable I make is a boolean, I added this to allow for a custom pattern whilst firing fuel, this is also optional to add, but I'll share what that looks like alongside the constructor I made for the 2026 Season."},
+         {"type": "text", "value": "With the variables out of the way, let's set up a completely optional constructor for the Blinkin, as I just used the constructor to set up the LED Pattern Table I decided on making for the Blinkin. I first made the SendableChooser class member set a default option of Lime. Then printed out a line for the drive team to see. I then just made a for loop to go through the enum and every option, making sure that if the pattern isn't the default we just added, that it adds that to our SendableChooser. After that for loop, I just put the data into SmartDashboard as an LED Pattern with the SendableChooser as the data. Here's that example of the Blinkin Subsystem so far."},
+         {"type": "image", "value": "images/blinkin-frc/blinkin-setup.png"}
+      ]
+    },
+    {
+      "postAuthor":"Riley A.",
+      "postDate": "10/31/2026 11:54 AM Eastern Daylight Time",
+      "postNumber": 4,
+      "items": [
+         {"type":"text", "value": "Right, Let's make some methods I find useful, that being setAllianceColor (This is a method name), and setCustomColor. My example code does have a secondary Alliance Color setting method themed for the Goonettes Invitational (Event meant to empower women in STEM), but it's just a rehash for the setAllianceColor method with different values. Firstly, we make a variable called Alliance, which we call to set to DriverStation.getAlliance, which for clarity you should specify as Optional<Alliance>, not var, even though var does automatically set a type for that variable. I then made an if statement of if the alliance is present, then we run an if-else statement checking the alliance type of whether it's on the Red Alliance or the Blue Alliance, which the Alliance thing is an enum. We then call that \"Spark Motor\" to one of our Blinkin Pattern's values, such as Breath Red, which for setting a value for that spark motor, we want to call blinkinPatterns.ENUM_PATTERN.value, as the Spark set method is technically looking for a speed value (Double), which is where we set the pattern value (Again, the Blinkin is a really fancy Spark Motor)."},
+         {"type": "text", "value": "Depending on if you had the if statement check if we're on the Red Alliance or the Blue Alliance, the else statement would be the value for the opposite alliance, which in my case I set that to be the Breath Blue value, as I checked for if we're on the red alliance. Here's the example code I made for the 2026 Season."},
+         {"type": "image", "value": "images/blinkin-frc/blinkin-set-ally-color.png"},
+         {"type": "text", "value": "With that in mind, next up is the setCustomColor method. This method pretty much just pulls whatever choice is currently selected for the LED Pattern inside of our Dashboard used by Drive Team. So the code for this is really basic of setting a variable with the type of our enum we made for the patterns pull from SendableChooser.getSelected() as this pulls from the dashboard and then sets the value, which then we run an if statement to check if the selected option isn't null, we then set the led controller to our selected option's value. That looks something like this."},
+         {"type": "image", "value": "images/blinkin-frc/blinkin-set-custom.png"}, 
+         {"type":"text", "value": "Next up would be I suppose a helper method to allow for using these two (or more) methods to pull from our Blinkin Constants to determine what values we want to use for the competition, and maybe setFiringAnim, as that uses that boolean we made a little while ago, I don't think I need to share setPattern, as that's just a manual override set method of the pattern, phaseMode is pretty much the same as our setAllianceColor method, but that was pretty much used for the phases of the 2026 Season where there were times in each match where our main scoring option is disabled for 25 seconds while the other alliance gets to score, so I mde a method to signify when we can score."}
+      ]
+    },
+    {
+      "postAuthor":"Riley A.",
+      "postDate": "10/31/2026 1:49 PM Eastern Daylight Time",
+      "postNumber": 5,
+      "items": [
+         {"type": "text", "value": "Okay, now onto the helper method. I made a method called easyChoice with a parameter of choice, and then if the choice, when converted to lowercase contains the default, then it runs setAllianceColor, otherwise, if the choice set, coverted to lowercase, contains custom in the text, then it runs setCustomColor. I'll share my example code, which contains the method for changing the alliance color themed around the Goonettes Invitational."},
+         {"type": "image", "value": "images/blinkin-frc/helper-method.png"},
+         {"type": "text", "value": "Ok, with that out of the way, the setFiringAnim method. In this one, we set our member class to a boolean parameter defined in the method. Then we check the alliance, in this instance I realized it was convenient to add .orElse(DriverStation.Alliance.Blue) to the end of the DriverStation.getAlliance() in case that fails. Then if that boolean is true, then we have an if statement to set the alliance type to in my case either SHOT_RED or SHOT_BLUE. Which can be seen here (Do note that I use a ternary operator here, I'll share code of if you want to use a regular if statement)"},
+         {"type": "image", "value": "images/blinkin-frc/firing-anim-method.png"},
+         {"type": "text", "value": "In case you aren't sure what that ternary operator is supposed to be, here's what it looks like as a standard if statement."},
+         {"type": "code", "value": "if (isShooting){\n   if (alliance == DriverStation.Alliance.Red) {\n      m_ledController.set(blinkinPattern.SHOT_RED.value)\n   }else{\n      m_ledController.set(blinkinPattern.SHOT_BLUE.value)\n   }\n}"}
+      ]
+    }
+
+ ]
+}
