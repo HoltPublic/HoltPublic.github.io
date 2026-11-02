@@ -1,7 +1,7 @@
 {
  "metadata":{
     "title": "Rev Blinkin for FIRST Robotics Competition (Commands Version 2)",
-    "lastUpdated": "10/31/2026",
+    "lastUpdated": "11/02/2026",
     "latestAuthor": "Riley A."
  },
 
@@ -73,6 +73,26 @@
          {"type": "image", "value": "images/blinkin-frc/firing-anim-method.png"},
          {"type": "text", "value": "In case you aren't sure what that ternary operator is supposed to be, here's what it looks like as a standard if statement."},
          {"type": "code", "value": "if (isShooting){\n   if (alliance == DriverStation.Alliance.Red) {\n      m_ledController.set(blinkinPattern.SHOT_RED.value)\n   }else{\n      m_ledController.set(blinkinPattern.SHOT_BLUE.value)\n   }\n}"}
+      ]
+    },
+    {
+      "postAuthor":"Riley A.",
+      "postDate": "11/02/2026 6:55 PM Eastern Standard Time",
+      "postNumber": 6,
+      "items": [
+         {"type": "text", "value": "With setAllianceColor, setFiringAnim, and a secondary iteration of setAllianceColor to represent active TeleOP phases, we now will move on to the periodic method. My example gets the current LED Mode, which is essentially getting the name of the current command or idle, then there's checking if we are firing fuel and if so we set up our firing animation, then if we're in TeleOP, we use a timer to determine each shift, and also determining whether we're inactive first or not, then we change the pattern displayed to either the active phase animation, or the default one if we're inactive. Then if we're not in TeleOP, we just set it to the inactive alliance colors. This is going to be pretty long (My example code goes from line 53 to line 87)"},
+         {"type": "text", "value": "Ok, so let's skip the SmartDashboard stuff here, I dunno if it works. Firstly, we check if we are firing fuel (Which as m_isFiring is a boolean, that means that the result of that is whether the if statement is true or false), then we make an else if statement checking if TeleOP is enabled, where we set up a timer using a double, getting the match time via DriverStation.getMatchTime. We then check the game data based on DriverStation.getGameSpecificMessage. Afterwards, we check if this game data is empty, or the time is greater than 130 or less than or equal to 30 (130 corresponds to 2:10 on the clock meaning that any time greater than that we should be running inactive lights, same goes for endgame where we can score)."},
+         {"type": "text", "value": "If any of those values are true (As the code uses an or statement), then we set the blinkin to use the inactive alliance colors and then run a return statement. Otherwirse, we check our alliance, and then in a twist of irony, I made my variable the inverse of what it was supposed to be, we'll set up a boolean called weAreActiveFirst, which checks if the game data starts with the letter opposite of the alliance we're a part of (hence the ternary operator for the Alliance), as the game data will use the first letter of the alliance that scored higher in auton, which makes them inactive first as per this image."},
+         {"type": "image", "value": "images/blinkin-frc/hub-activity.png"},
+         {"type": "text", "value": "As we know that if the opposing alliance scores higher in auton, we're active first. I then set up some integer stuff related to the current shift based on the match time values, which as we know that a minute is 60 seconds, we add in 60 seconds per minute in the timer."},
+         {"type": "image", "value": "images/blinkin-frc/match-timing.png"},
+         {"type": "text", "value": "And so I'll share what that looks like."}, 
+         {"type": "image", "value": "images/blinkin-frc/periodic-method-1.png"},
+         {"type": "text", "value": "After that, I run an if statement checking whether we're in shifts 1 or 3, and if so, then if we're active first, we run phaseMode, otherwise, we run the inactive alliance colors. If we're in phases 2 or 4, then the if statement from shifts 1 or 3 get inverted. And lastly, outside the TeleOP if statement, if we're in Autonomous, then it runs our inactive colors."},
+         {"type": "image", "value": "images/blinkin-frc/periodic-method-2.png"},
+         {"type": "text", "value": "And with that. We now have a full periodic method for the rev blinkin. I'll go ahead and share the full periodic method in case you want to see the full code I made in 1 image for it."},
+         {"type": "image", "value": "images/blinkin-frc/periodic-method-full.png"},
+         {"type": "text", "value": "And with that, that ends my coverage of the REV Blinkin for Commands Version 2. If there's anything you want to add, feel free to add it, after all, this is a knowledge board for anyone to share their knowledge to, after all, these are all edited using JSON files."}
       ]
     }
 
