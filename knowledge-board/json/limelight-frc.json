@@ -1,0 +1,20 @@
+{
+    "metadata":{
+         "title": "Limelight for FIRST Robotics Competition",
+         "lastUpdated": "11/02/2026",
+         "latestAuthor": "Riley A. (Mentor)"
+    },
+    "blocks":[
+        {
+            "postAuthor":"Riley A. (Mentor)",
+            "postDate": "11/02/2026 7:00 PM Eastern Standard Time",
+            "postNumber": 1,
+            "items": [
+                {"type": "text", "value": "The Limelight is a vision camera, it's pretty useful and I think is used by the best FRC teams in the world. Most people use it for position and angle tracking via Apriltags."},
+                {"type": "text", "value": "Let's first go set up Constants for it. Looking at past seasons (Where I unfortunately had either guessed what documentation is good for the 2026 season or have 0 documentation to work with for the 2024 Season) I'll explain some Constants used in the 2024 Season first."},
+                {"type": "text", "value": "Firstly, we've got kMountAngleRadians, which is essentially camera tilt, as typically, the robot has a very specific angle to look at Apriltags for ... Ok I should probably see about getting either of the mentors at the time who worked on Limelight more than me to explain these Constants."},
+                {"type": "text", "value": "Looking at my old, undocumented code, inside of the Limelight Subsystem, I pretty much used "}
+            ]
+        }
+    ]
+}
